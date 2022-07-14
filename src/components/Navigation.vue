@@ -1,7 +1,7 @@
 <template>
   <div class="navigation">
     <div class="sidebar" v-for="nav in navs" :key="nav.id">
-      <div>
+      <div >
         <router-link :to="nav.href">
           <div
             class="sidebar-post"
@@ -83,14 +83,14 @@ export default {
 .navigation {
   width: 260px;
   position: fixed;
+    border-right: 1px solid #f0f0f0;
   top: 61px;
   z-index: 10;
   margin-top: 16px;
 }
 .sidebar {
-  width: 260px;
-  border-right: 1px solid #f0f0f0;
-  /* margin-top: 16px; */
+  width:calc(100% - 32px) ;
+  margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -107,10 +107,9 @@ export default {
   width: 100%;
   justify-content: start;
   align-items: center;
-  /* background-color: #fff; */
   width: 228px;
   height: 40px;
-  padding: 2px 16px;
+  padding: 2px 0px;
 }
 .sidebar-post-host .sidebar-img {
   padding-right: 16px;
@@ -131,7 +130,7 @@ a {
   text-decoration: none;
 }
 .sidebar-infor {
-  width: 40px;
+  width: 32px;
   height: 18px;
   border-radius: 40px;
   background-color: #e72511;
